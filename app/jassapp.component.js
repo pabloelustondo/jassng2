@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1) {
+System.register(['angular2/core', './heroes.component'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -10,12 +10,15 @@ System.register(['angular2/core'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, heroes_component_1;
     var JassappComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (heroes_component_1_1) {
+                heroes_component_1 = heroes_component_1_1;
             }],
         execute: function() {
             JassappComponent = (function () {
@@ -25,7 +28,8 @@ System.register(['angular2/core'], function(exports_1) {
                 JassappComponent = __decorate([
                     core_1.Component({
                         selector: "jassapp",
-                        template: "<h1>{{title}}</h1>\n  "
+                        directives: [heroes_component_1.HeroesComponent],
+                        template: "<h1>{{title}}</h1>\n  <heroes></heroes>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], JassappComponent);
