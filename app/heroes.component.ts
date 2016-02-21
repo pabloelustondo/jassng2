@@ -66,7 +66,7 @@ var STYLES = [`
 `]
 
 @Component({
-    selector: 'jassng2app',
+    selector: 'heroes',
     directives: [HeroDetailComponent],
     styles: STYLES,
     template:`
@@ -82,7 +82,7 @@ var STYLES = [`
         `,
     providers: [HeroService]
 })
-export class AppComponent implements OnInit {
+export class HeroesComponent implements OnInit {
     public title = 'Tour of Heroes';
     public heroes: Hero[];
     public selectedHero: Hero;
