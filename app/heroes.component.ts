@@ -79,8 +79,7 @@ var STYLES = [`
 </ul>
 </div>
 <herodetail [hero]="selectedHero"></herodetail>
-        `,
-    providers: [HeroService]
+        `
 })
 export class HeroesComponent implements OnInit {
     public title = 'Tour of Heroes';

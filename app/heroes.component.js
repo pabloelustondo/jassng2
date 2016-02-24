@@ -46,8 +46,7 @@ System.register(['angular2/core', './herodetail.component', './hero.service'], f
                         selector: 'heroes',
                         directives: [herodetail_component_1.HeroDetailComponent],
                         styles: STYLES,
-                        template: "\n<div class=\"heroesList\">\n<h2>My Heroes List</h2>\n<ul class=\"heroes\">\n  <li *ngFor=\"#hero of heroes\" (click)=\"onSelect(hero)\">\n  <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n  </li>\n</ul>\n</div>\n<herodetail [hero]=\"selectedHero\"></herodetail>\n        ",
-                        providers: [hero_service_1.HeroService]
+                        template: "\n<div class=\"heroesList\">\n<h2>My Heroes List</h2>\n<ul class=\"heroes\">\n  <li *ngFor=\"#hero of heroes\" (click)=\"onSelect(hero)\">\n  <span class=\"badge\">{{hero.id}}</span> {{hero.name}}\n  </li>\n</ul>\n</div>\n<herodetail [hero]=\"selectedHero\"></herodetail>\n        "
                     }), 
                     __metadata('design:paramtypes', [hero_service_1.HeroService])
                 ], HeroesComponent);

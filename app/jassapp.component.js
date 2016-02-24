@@ -1,4 +1,4 @@
-System.register(['angular2/core', './heroes.component'], function(exports_1) {
+System.register(['angular2/core', './heroes.component', './hero.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './heroes.component'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, heroes_component_1;
+    var core_1, heroes_component_1, hero_service_1;
     var JassappComponent;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(['angular2/core', './heroes.component'], function(exports_1) {
             },
             function (heroes_component_1_1) {
                 heroes_component_1 = heroes_component_1_1;
+            },
+            function (hero_service_1_1) {
+                hero_service_1 = hero_service_1_1;
             }],
         execute: function() {
             JassappComponent = (function () {
@@ -29,7 +32,10 @@ System.register(['angular2/core', './heroes.component'], function(exports_1) {
                     core_1.Component({
                         selector: "jassapp",
                         directives: [heroes_component_1.HeroesComponent],
-                        template: "<h1>{{title}}</h1>\n  <heroes></heroes>\n  "
+                        template: "<h1>{{title}}</h1>\n  <heroes></heroes>\n  ",
+                        providers: [
+                            hero_service_1.HeroService
+                        ]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], JassappComponent);
