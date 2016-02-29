@@ -1,4 +1,4 @@
-System.register(['angular2/core', './heroes.component', './hero.service', 'angular2/router'], function(exports_1) {
+System.register(['angular2/core', './heroes.component', './dashboard.component', './hero.service', 'angular2/router'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './heroes.component', './hero.service', 'angul
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, heroes_component_1, hero_service_1, router_1;
+    var core_1, heroes_component_1, dashboard_component_1, hero_service_1, router_1;
     var JassappComponent;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(['angular2/core', './heroes.component', './hero.service', 'angul
             },
             function (heroes_component_1_1) {
                 heroes_component_1 = heroes_component_1_1;
+            },
+            function (dashboard_component_1_1) {
+                dashboard_component_1 = dashboard_component_1_1;
             },
             function (hero_service_1_1) {
                 hero_service_1 = hero_service_1_1;
@@ -35,7 +38,7 @@ System.register(['angular2/core', './heroes.component', './hero.service', 'angul
                     core_1.Component({
                         selector: "jassapp",
                         directives: [router_1.ROUTER_DIRECTIVES],
-                        template: "\n  <h1>{{title}}</h1>\n  <a [routerLink]=\"['Heroes']\">Heroes</a>\n  <router-outlet></router-outlet>\n  ",
+                        template: "\n  <h1>{{title}}</h1>\n  <a [routerLink]=\"['Heroes']\">Heroes</a>\n  <a [routerLink]=\"['Dashboard']\">Dashboard</a>\n  <router-outlet></router-outlet>\n  ",
                         providers: [
                             hero_service_1.HeroService,
                             router_1.ROUTER_PROVIDERS,
@@ -46,7 +49,13 @@ System.register(['angular2/core', './heroes.component', './hero.service', 'angul
                             path: '/heroes',
                             name: 'Heroes',
                             component: heroes_component_1.HeroesComponent
-                        }
+                        },
+                        {
+                            path: '/dashboard',
+                            name: 'Dashboard',
+                            component: dashboard_component_1.DashboardComponent,
+                            useAsDefault: true
+                        },
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], JassappComponent);
