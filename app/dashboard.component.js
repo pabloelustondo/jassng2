@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1) {
+System.register(['angular2/core', './hero.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -10,23 +10,34 @@ System.register(['angular2/core'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, hero_service_1;
     var DashboardComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (hero_service_1_1) {
+                hero_service_1 = hero_service_1_1;
             }],
         execute: function() {
             DashboardComponent = (function () {
-                function DashboardComponent() {
+                function DashboardComponent(_heroService) {
+                    this._heroService = _heroService;
+                    this.heroes = [];
                 }
+                DashboardComponent.prototype.ngOnInit = function () {
+                    var _this = this;
+                    this._heroService.getHeroes()
+                        .then(function (heroes) { return _this.heroes = heroes.slice(1, 5); });
+                };
+                DashboardComponent.prototype.gotoDetail = function () { };
                 DashboardComponent = __decorate([
                     core_1.Component({
                         selector: 'jassboard',
-                        template: '<h3>My Dashboard</h3>'
+                        template: "\n      <div class=\"grid grid-pad\">\n    <div *ngFor=\"#hero of heroes\" (click)=\"gotoDetail(hero)\" class=\"col-1-4\" >\n        <div class=\"module hero\">\n            <h4>{{hero.name}}</h4>\n        </div>\n    </div>\n</div>\n    "
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [hero_service_1.HeroService])
                 ], DashboardComponent);
                 return DashboardComponent;
             })();
