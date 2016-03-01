@@ -1,4 +1,4 @@
-System.register(['angular2/core', './heroes.component', './dashboard.component', './hero.service', 'angular2/router'], function(exports_1) {
+System.register(['angular2/core', './heroes.component', './herodetail.component', './dashboard.component', './hero.service', 'angular2/router'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './heroes.component', './dashboard.component',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, heroes_component_1, dashboard_component_1, hero_service_1, router_1;
+    var core_1, heroes_component_1, herodetail_component_1, dashboard_component_1, hero_service_1, router_1;
     var JassappComponent;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(['angular2/core', './heroes.component', './dashboard.component',
             },
             function (heroes_component_1_1) {
                 heroes_component_1 = heroes_component_1_1;
+            },
+            function (herodetail_component_1_1) {
+                herodetail_component_1 = herodetail_component_1_1;
             },
             function (dashboard_component_1_1) {
                 dashboard_component_1 = dashboard_component_1_1;
@@ -56,6 +59,11 @@ System.register(['angular2/core', './heroes.component', './dashboard.component',
                             component: dashboard_component_1.DashboardComponent,
                             useAsDefault: true
                         },
+                        {
+                            path: '/detail/:id',
+                            name: 'HeroDetail',
+                            component: herodetail_component_1.HeroDetailComponent
+                        }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], JassappComponent);

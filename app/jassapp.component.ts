@@ -3,6 +3,7 @@
  */
 import { Component } from 'angular2/core'
 import { HeroesComponent } from './heroes.component';
+import { HeroDetailComponent } from './herodetail.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroService }     from './hero.service';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
@@ -34,6 +35,11 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
     component: DashboardComponent,
     useAsDefault: true
   },
+  {
+    path: '/detail/:id',
+    name: 'HeroDetail',
+    component: HeroDetailComponent
+  }
 ])
 export class JassappComponent{
   public title: string = 'In Construction';
