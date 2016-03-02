@@ -37,10 +37,13 @@ System.register(['angular2/core', 'angular2/router', './hero.service'], function
                         return _this.hero = hero;
                     });
                 };
+                HeroDetailComponent.prototype.goBack = function () {
+                    window.history.back();
+                };
                 HeroDetailComponent = __decorate([
                     core_1.Component({
                         selector: 'herodetail',
-                        template: "\n  <div *ngIf=\"hero\">\n    <h2>{{hero.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n    </div>\n  </div>\n",
+                        template: "\n  <div *ngIf=\"hero\">\n    <h2>{{hero.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n    </div>\n  </div>\n   <button (click)=\"goBack()\">Back</button>\n",
                         inputs: ['hero']
                     }), 
                     __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.RouteParams])

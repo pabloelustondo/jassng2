@@ -15,6 +15,7 @@ import { Component, OnInit } from 'angular2/core';
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </div>
   </div>
+   <button (click)="goBack()">Back</button>
 `  ,
     inputs: ['hero']
 })
@@ -31,6 +32,10 @@ export class HeroDetailComponent {
         this._heroService.getHero(id)
             .then(hero =>
                 this.hero = hero);
+    }
+
+    goBack() {
+        window.history.back();
     }
 
     public hero: Hero;
