@@ -43,6 +43,7 @@ System.register(['angular2/core', 'angular2/router', './hero.service'], function
                 HeroDetailComponent = __decorate([
                     core_1.Component({
                         selector: 'herodetail',
+                        styleUrls: ['app/herodetail.component.css'],
                         template: "\n  <div *ngIf=\"hero\">\n    <h2>{{hero.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n    </div>\n  </div>\n   <button (click)=\"goBack()\">Back</button>\n",
                         inputs: ['hero']
                     }), 

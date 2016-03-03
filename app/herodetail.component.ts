@@ -6,6 +6,7 @@ import { Component, OnInit } from 'angular2/core';
 
 @Component({
     selector: 'herodetail',
+    styleUrls:  ['app/herodetail.component.css'],
     template: `
   <div *ngIf="hero">
     <h2>{{hero.name}} details!</h2>

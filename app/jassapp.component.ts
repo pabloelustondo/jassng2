@@ -10,11 +10,12 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 
 @Component({
   selector:"jassapp",
+    styleUrls: ['app/jassapp.component.css'],
   directives: [ROUTER_DIRECTIVES],
   template:`
   <h1>{{title}}</h1>
-  <a [routerLink]="['Heroes']">Heroes</a>
-  <a [routerLink]="['Dashboard']">Dashboard</a>
+  <nav><a [routerLink]="['Heroes']">Heroes</a></nav>
+  <nav><a [routerLink]="['Dashboard']">Dashboard</a></nav>
   <router-outlet></router-outlet>
   `,
   providers: [

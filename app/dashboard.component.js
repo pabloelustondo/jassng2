@@ -42,6 +42,7 @@ System.register(['angular2/core', './hero.service', 'angular2/router'], function
                 DashboardComponent = __decorate([
                     core_1.Component({
                         selector: 'jassboard',
+                        styleUrls: ['app/dashboard.component.css'],
                         template: "\n      <div class=\"grid grid-pad\">\n    <div *ngFor=\"#hero of heroes\" (click)=\"gotoDetail(hero)\" class=\"col-1-4\" >\n        <div class=\"module hero\">\n            <h4>{{hero.name}}</h4>\n        </div>\n    </div>\n</div>\n    "
                     }), 
                     __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.Router])

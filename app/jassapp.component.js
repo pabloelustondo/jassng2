@@ -40,8 +40,9 @@ System.register(['angular2/core', './heroes.component', './herodetail.component'
                 JassappComponent = __decorate([
                     core_1.Component({
                         selector: "jassapp",
+                        styleUrls: ['app/jassapp.component.css'],
                         directives: [router_1.ROUTER_DIRECTIVES],
-                        template: "\n  <h1>{{title}}</h1>\n  <a [routerLink]=\"['Heroes']\">Heroes</a>\n  <a [routerLink]=\"['Dashboard']\">Dashboard</a>\n  <router-outlet></router-outlet>\n  ",
+                        template: "\n  <h1>{{title}}</h1>\n  <nav><a [routerLink]=\"['Heroes']\">Heroes</a></nav>\n  <nav><a [routerLink]=\"['Dashboard']\">Dashboard</a></nav>\n  <router-outlet></router-outlet>\n  ",
                         providers: [
                             hero_service_1.HeroService,
                             router_1.ROUTER_PROVIDERS,

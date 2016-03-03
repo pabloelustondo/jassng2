@@ -5,6 +5,7 @@ import { Router } from 'angular2/router';
 
 @Component({
     selector: 'jassboard',
+    styleUrls:  ['app/dashboard.component.css'],
     template: `
       <div class="grid grid-pad">
     <div *ngFor="#hero of heroes" (click)="gotoDetail(hero)" class="col-1-4" >
